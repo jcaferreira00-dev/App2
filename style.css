@@ -321,3 +321,16 @@ li{
     background:#1b5e20;
 
 }
+
+/* ==========================
+   SALDO NEGATIVO
+========================== */
+
+
+.saldoNegativo{
+    color:#ff5252 !important;
+}
+
+.saldoPositivo{
+    color:#ffffff;
+}
