@@ -296,6 +296,14 @@ onclick="toggleVale(${item.id})">
 ${item.pago ? "Pago" : "Pagar"}
 </button>
 
+<button
+class="${item.fixa ? "btnFixa" : "btnNormal"}"
+onclick="toggleFixaVale(${item.id})">
+
+${item.fixa ? "📌 Fixa" : "📍 Fixa"}
+
+</button>
+
 <button class="btnExcluir"
 onclick="removerVale(${item.id})">
 Excluir
