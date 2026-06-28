@@ -500,6 +500,29 @@ Saldo: ${moeda(saldo)}
     banco.historico.unshift(texto);
 
     salvarBanco();
+    if (!confirm("Todas as contas deste mês foram pagas?")) {
+    // Você pode decidir apenas continuar ou fazer alguma ação.
+}
+
+// Avança para o próximo mês
+mesAtual = Number(mesAtual);
+
+if (mesAtual === 12) {
+    mesAtual = "01";
+    anoAtual = String(Number(anoAtual) + 1);
+} else {
+    mesAtual = String(mesAtual + 1).padStart(2, "0");
+}
+
+// Salva o novo mês
+localStorage.setItem("mesAtual", mesAtual);
+localStorage.setItem("anoAtual", anoAtual);
+
+// Atualiza os selects da tela
+document.getElementById("mesSelecionado").value = mesAtual;
+document.getElementById("anoSelecionado").value = anoAtual;
+
+salvarBanco();
     atualizar();
 }
 
