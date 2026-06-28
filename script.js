@@ -144,6 +144,7 @@ function adicionarVale() {
         descricao,
         valor,
         pago: false,
+        fixa: false,
         mes: mesAtual,
         ano: anoAtual,
         data: new Date().toLocaleDateString("pt-BR")
@@ -157,7 +158,7 @@ function adicionarVale() {
 }
 
 // ===========================
-// PAGAMENTOS
+// PAGAMENTO
 // ===========================
 
 function adicionarPagamento() {
@@ -175,6 +176,7 @@ function adicionarPagamento() {
         descricao,
         valor,
         pago: false,
+        fixa: false,
         mes: mesAtual,
         ano: anoAtual,
         data: new Date().toLocaleDateString("pt-BR")
