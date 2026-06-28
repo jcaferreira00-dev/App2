@@ -232,12 +232,19 @@ function atualizar() {
 
     let saldo = totalReceitas - totalVale - totalPagamento;
 
-    document.getElementById("saldoAtual").innerText = moeda(saldo);
-    document.getElementById("saldoResumo").innerText = moeda(saldo);
+const saldoTela = document.getElementById("saldoAtual");
+const saldoResumo = document.getElementById("saldoResumo");
 
-    document.getElementById("resReceitas").innerText = moeda(totalReceitas);
-    document.getElementById("resVale").innerText = moeda(totalVale);
-    document.getElementById("resPagamento").innerText = moeda(totalPagamento);
+saldoTela.innerText = moeda(saldo);
+saldoResumo.innerText = moeda(saldo);
+
+// MUDA A COR DO SALDO
+saldoTela.className = saldo < 0 ? "saldoNegativo" : "saldoPositivo";
+saldoResumo.className = saldo < 0 ? "saldoNegativoResumo" : "saldoPositivoResumo";
+
+document.getElementById("resReceitas").innerText = moeda(totalReceitas);
+document.getElementById("resVale").innerText = moeda(totalVale);
+document.getElementById("resPagamento").innerText = moeda(totalPagamento);
 
     renderReceitas(receitas);
     renderVale(vales);
