@@ -336,8 +336,11 @@ li{
   background: #2e7d32; /* verde principal */
   color: #ffffff;
 }
-
-/* Saldo negativo */
+.saldoPositivo h1,
+.saldoPositivo h2 {
+  color: #ffffff;      /* garante que títulos também fiquem brancos */ 
+}
+   /* Saldo negativo */
 .saldoNegativo {
   background: #ffebee; /* vermelho claro */
   color: #d32f2f;
