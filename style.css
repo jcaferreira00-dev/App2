@@ -21,7 +21,7 @@ body{
 }
 
 /* ==========================
-   HEADER
+   CABEÇALHO
 ========================== */
 
 header{
@@ -34,126 +34,21 @@ header h1{
     margin-bottom:15px;
 }
 
-/* =====================================================
-   DASHBOARD
-   LAYOUT PRINCIPAL
-   ===================================================== */
-
 .saldo-card{
-
-    display:flex;
-    justify-content:space-between;
-    align-items:stretch;
-    gap:25px;
-    padding:20px;
-    overflow:hidden;
-
-}
-
-/* =====================================================
-   DASHBOARD
-   PAINEL ESQUERDO (35%)
-   ===================================================== */
-
-.saldoEsquerda{
-
-    flex:0 0 35%;
-
-    display:flex;
-    flex-direction:column;
-    align-items:center;
-    justify-content:flex-start;
-
-    text-align:center;
-    gap:10px;
-
-    padding:10px;
-
-    overflow:hidden;
-
-}
-
-.iconeCarteira{
-
-    width:90px;
-    height:90px;
-
-    border-radius:50%;
-
-    display:flex;
-    align-items:center;
-    justify-content:center;
-
-    font-size:46px;
-
     background:#2e7d32;
-    color:#fff;
-
-    box-shadow:0 6px 15px rgba(0,0,0,.18);
-
+    color:white;
+    padding:20px;
+    border-radius:12px;
+    box-shadow:0 3px 10px rgba(0,0,0,.15);
 }
 
-.saldoEsquerda h2{
+.saldo-card h2{
     font-size:18px;
-    color:#666;
-    margin:0;
+    margin-bottom:8px;
 }
 
-.saldoEsquerda h1{
-    font-size:34px;
-    margin:0;
-}
-
-/* =====================================================
-   INDICADORES
-   ===================================================== */
-
-.indicadores{
-
-    width:100%;
-    display:flex;
-    flex-direction:column;
-    gap:10px;
-    margin-top:10px;
-
-}
-
-.indicador{
-
-    display:flex;
-    justify-content:space-between;
-    align-items:center;
-
-    font-size:14px;
-
-    padding:6px 0;
-
-    border-bottom:1px solid #e6e6e6;
-
-}
-
-/* =====================================================
-   DASHBOARD
-   PAINEL DIREITO (65%)
-   ===================================================== */
-
-.saldoDireita{
-
-    flex:0 0 65%;
-
-    display:flex;
-    align-items:center;
-    justify-content:center;
-
-    height:220px;
-
-    overflow:hidden;
-
-}
-
-#graficoMensal{
-    width:100%;
-    height:100%;
+.saldo-card h1{
+    font-size:36px;
 }
 
 /* ==========================
@@ -201,6 +96,7 @@ header h1{
     border:none;
     border-radius:8px;
     cursor:pointer;
+    transition:.2s;
 }
 
 .linha button:hover{
@@ -244,6 +140,7 @@ li{
 
 .itemValor{
     color:#2e7d32;
+    font-size:15px;
 }
 
 /* ==========================
@@ -259,8 +156,6 @@ li{
 button{
     cursor:pointer;
 }
-
-/* AÇÕES */
 
 .btnPagar{
     background:#1976d2;
@@ -286,14 +181,16 @@ button{
     border-radius:6px;
 }
 
-/* FIXA */
+/* NOVO - CONTAS FIXAS */
 
 .btnFixa{
     background:#ff9800;
     color:white;
     border:none;
     padding:8px 10px;
+    min-width:42px;
     border-radius:6px;
+    font-size:16px;
 }
 
 .btnNormal{
@@ -301,7 +198,13 @@ button{
     color:white;
     border:none;
     padding:8px 10px;
+    min-width:42px;
     border-radius:6px;
+    font-size:16px;
+}
+
+button:hover{
+    opacity:.9;
 }
 
 /* ==========================
@@ -366,21 +269,6 @@ button{
 }
 
 /* ==========================
-   BOTÃO FECHAR MÊS
-========================== */
-
-.btnFecharMes{
-    width:100%;
-    padding:16px;
-    font-size:18px;
-    font-weight:bold;
-    border:none;
-    border-radius:12px;
-    background:#2e7d32;
-    color:white;
-}
-
-/* ==========================
    RESPONSIVO
 ========================== */
 
@@ -390,14 +278,63 @@ button{
     grid-template-columns:1fr;
 }
 
-.saldo-card{
-    flex-direction:column;
+.itemBotoes{
+    margin-top:10px;
 }
 
-.saldoEsquerda,
-.saldoDireita{
-    flex:1;
+li{
+    flex-direction:column;
+    align-items:flex-start;
+}
+
+.itemBotoes{
     width:100%;
 }
 
+.itemBotoes button{
+    flex:1;
+}
+
+}
+.btnFecharMes{
+
+    width:100%;
+
+    padding:16px;
+
+    font-size:18px;
+
+    font-weight:bold;
+
+    border:none;
+
+    border-radius:12px;
+
+    background:#2e7d32;
+
+    color:white;
+
+    cursor:pointer;
+
+    transition:.2s;
+
+}
+
+.btnFecharMes:hover{
+
+    background:#1b5e20;
+
+}
+
+/* ==========================
+   SALDO NEGATIVO
+========================== */
+
+
+.saldoNegativo{
+    color:#ff5252 !important;
+}
+
+.saldoPositivo{
+    color:#ffffff;
 }
