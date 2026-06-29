@@ -289,11 +289,29 @@ button:hover{
 ========================== */
 
 @media(max-width:800px){
-
-.duas-colunas{
+  .duas-colunas{
     grid-template-columns:1fr;
+  }
+
+  /* BOTÃO FECHAR MÊS */
+  .itemBotoes{
+      margin-top:10px;
+  }
+
+  li{
+      flex-direction:column;
+      align-items:flex-start;
+  }
+
+  .itemBotoes{
+      width:100%;
+  }
+
+  .itemBotoes button{
+      flex:1;
+  }
 }
-   
+
 /* ==========================
    RESPONSIVO - RECEITAS
 ========================== */
