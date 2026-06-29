@@ -81,87 +81,32 @@
 
 <!-- VALE E PAGAMENTO -->
 
+<!-- VALE E PAGAMENTO -->
+
 <section class="duas-colunas">
 
-<div class="card">
+  <div class="card vale despesas">
+    <h2>Despesas no Vale</h2>
+    <div class="linha">
+      <input id="descricaoVale" placeholder="Adicionar nova despesa">
+      <input id="valorVale" type="number" step="0.01" placeholder="Valor">
+      <button onclick="adicionarVale()">Adicionar</button>
+    </div>
+    <ul id="listaVale"></ul>
+  </div>
 
-<h2>Despesas no Vale</h2>
-
-<div class="linha">
-
-<input id="descricaoVale" placeholder="Adicionar nova despesa">
-
-<input
-id="valorVale"
-type="number"
-step="0.01"
-placeholder="Valor">
-
-<button onclick="adicionarVale()">
-Adicionar
-</button>
-
-</div>
-
-<ul id="listaVale"></ul>
-
-</div>
-
-<div class="card">
-
-<h2>Despesas no Pagamento</h2>
-
-<div class="linha">
-
-<input
-id="descricaoPagamento"
-placeholder="Adicionar nova despesa">
-
-<input
-id="valorPagamento"
-type="number"
-step="0.01"
-placeholder="Valor">
-
-<button onclick="adicionarPagamento()">
-Adicionar
-</button>
-
-</div>
-
-<ul id="listaPagamento"></ul>
-
-</div>
+  <div class="card pagamento despesas">
+    <h2>Despesas no Pagamento</h2>
+    <div class="linha">
+      <input id="descricaoPagamento" placeholder="Adicionar nova despesa">
+      <input id="valorPagamento" type="number" step="0.01" placeholder="Valor">
+      <button onclick="adicionarPagamento()">Adicionar</button>
+    </div>
+    <ul id="listaPagamento"></ul>
+  </div>
 
 </section>
 
-<!-- RESUMO -->
-
-<section class="card resumo">
-
-<h2>Resumo</h2>
-
-<p>
-<span>Receitas</span>
-<span id="resReceitas">R$ 0,00</span>
-</p>
-
-<p>
-<span>Vale</span>
-<span id="resVale">R$ 0,00</span>
-</p>
-
-<p>
-<span>Pagamentos</span>
-<span id="resPagamento">R$ 0,00</span>
-</p>
-
-<p class="saldoFinal">
-<span>Saldo</span>
-<span id="saldoResumo">R$ 0,00</span>
-</p>
-
-</section>
 
 <section class="card">
 
