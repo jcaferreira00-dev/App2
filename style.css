@@ -288,12 +288,12 @@ button:hover{
    RESPONSIVO
 ========================== */
 
+/* até 800px: colunas viram uma, botões se ajustam */
 @media(max-width:800px){
   .duas-colunas{
-    grid-template-columns:1fr;
+      grid-template-columns:1fr;
   }
 
-  /* BOTÃO FECHAR MÊS */
   .itemBotoes{
       margin-top:10px;
   }
@@ -312,52 +312,35 @@ button:hover{
   }
 }
 
-/* ==========================
-   RESPONSIVO - RECEITAS
-========================== */
-
+/* até 600px: RECEITAS em duas colunas */
 @media(max-width:600px){
   .receitas .linha {
     display: grid;
-    grid-template-columns: 2fr 1fr auto; /* descrição, valor, botão */
-    gap: 8px;
+    grid-template-columns: 1fr 1fr; /* duas colunas */
+    gap: 10px;
   }
 
-  .receitas .linha input {
-    min-width: 0; /* evita quebra no celular */
-  }
-
+  .receitas .linha input,
   .receitas .linha button {
-    padding: 10px;
-    font-size: 14px;
+    min-width: 0;
+    width: 100%;
   }
 }
 
+/* DESPESAS: botões sempre na horizontal */
+.despesas .itemBotoes,
+.vale .itemBotoes,
+.pagamento .itemBotoes {
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 6px;
+}
 
 /* ==========================
-   BOTÃO FECHAR MÈS
+   BOTÃO FECHAR MÊS
 ========================== */
 
-.itemBotoes{
-    margin-top:10px;
-}
-
-li{
-    flex-direction:column;
-    align-items:flex-start;
-}
-
-.itemBotoes{
-    width:100%;
-}
-
-.itemBotoes button{
-    flex:1;
-}
-
-}
 .btnFecharMes{
-
     width:100%;
     padding:16px;
     font-size:18px;
@@ -371,9 +354,7 @@ li{
 }
 
 .btnFecharMes:hover{
-
     background:#1b5e20;
-
 }
 
 /* ==========================
@@ -391,11 +372,12 @@ li{
 }
 .saldoPositivo h1,
 .saldoPositivo h2 {
-  color: #ffffff;      /* garante que títulos também fiquem brancos */ 
+  color: #ffffff;      
 }
-   /* Saldo negativo */
+
+/* Saldo negativo */
 .saldoNegativo {
-  background: #ffebee; /* vermelho claro */
+  background: #ffebee; 
   color: #d32f2f;
 }
 
@@ -404,6 +386,3 @@ li{
   font-size: 40px;
   font-weight: bold;
 }
-
-
-
