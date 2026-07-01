@@ -32,12 +32,6 @@ body {
     flex:1;
 }
 
-/* Valor com largura fixa */
-#valorReceita{
-    flex:0 0 120px;
-    max-width:120px;
-}
-
 /* Responsivo */
 @media(max-width:600px){
 
@@ -451,12 +445,18 @@ li {
     grid-template-columns: 1fr 1fr;
     gap: 10px;
   }
-  .receitas .linha input,
-  .receitas .linha button,
-  .receitas .linha select {
-    min-width: 0;
-    width: 100%;
-  }
+ .receitas .linha #descricaoReceita{
+    width:100%;
+}
+
+.receitas .linha #valorReceita{
+    width:120px;
+    max-width:120px;
+}
+
+.receitas .linha .btnAddReceita{
+    width:42px;
+} 
 }
 
 /* ==========================
