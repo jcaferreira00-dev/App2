@@ -102,7 +102,7 @@ header h1 {
 .linha select,
 .linhaMes select {
   flex: 1;
-  min-width: 120px;
+  min-width: 0px;
   padding: 10px;
   border: 1px solid #ccc;
   border-radius: 8px;
