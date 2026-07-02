@@ -149,9 +149,12 @@ header h1 {
    DUAS COLUNAS
 ========================== */
 .duas-colunas {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
+  display: flex;
   gap: 20px;
+}
+
+.duas-colunas > .card {
+  flex: 1;
 }
 
 /* ==========================
