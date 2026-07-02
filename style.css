@@ -448,14 +448,18 @@ li {
 @media(max-width:800px) {
   .duas-colunas {
     grid-template-columns: 1fr;
+    align-items: start;
   }
+
   li {
     flex-direction: column;
     align-items: flex-start;
   }
+
   .itemBotoes {
     width: 100%;
   }
+
   .itemBotoes button {
     flex: 1;
   }
