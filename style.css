@@ -149,12 +149,9 @@ header h1 {
    DUAS COLUNAS
 ========================== */
 .duas-colunas {
-  display: flex;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
   gap: 20px;
-}
-
-.duas-colunas > .card {
-  flex: 1;
 }
 
 /* ==========================
@@ -448,18 +445,14 @@ li {
 @media(max-width:800px) {
   .duas-colunas {
     grid-template-columns: 1fr;
-    align-items: start;
   }
-
   li {
     flex-direction: column;
     align-items: flex-start;
   }
-
   .itemBotoes {
     width: 100%;
   }
-
   .itemBotoes button {
     flex: 1;
   }
